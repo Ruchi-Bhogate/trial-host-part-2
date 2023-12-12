@@ -112,7 +112,7 @@ function PaymentPage() {
              alert('No token found. Please log in.');
             return;
             }
-          const response = await axios.post('http://localhost:8080/cartview/create-order', orderDetails, {
+          const response = await axios.post('https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/cartview/create-order', orderDetails, {
             headers: { Authorization: `Bearer ${token}` },
           });
           
