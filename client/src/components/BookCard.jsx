@@ -26,7 +26,7 @@ function BookCard({ book, onAddToCart }) {
   return (
     <div className="book-card">
       <div className="book-image-container">
-      <img src={`http://localhost:8080/${book.image}`} alt="Book Cover" className="book-image" onClick={handleOpenModal} />
+      <img src={`https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/${book.image}`} alt="Book Cover" className="book-image" onClick={handleOpenModal} />
       </div>
       <div className="book-details">
         <p className="book-date">{new Date(book.postedAT).toLocaleDateString()}</p>
