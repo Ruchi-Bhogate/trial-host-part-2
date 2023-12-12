@@ -13,7 +13,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/login', {
+      const response = await axios.post('https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/login', {
         emailOrUsername,
         password,
       });
@@ -78,7 +78,7 @@ function Login() {
       </Box>
       <Box className="social-login">
         <Typography variant="body1">
-          <a href="http://localhost:8080/auth/google" className="google-login">
+          <a href="https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/auth/google" className="google-login">
             Login with Google
           </a>
         </Typography>
