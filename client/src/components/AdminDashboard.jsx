@@ -17,7 +17,7 @@ function AdminOrdersPage(){
   const handleOrderUpdate = async (orderId, status) => {
     try {
       const response = await axios.put(
-        `http://localhost:8080/admin/orders/${orderId}`,
+        `https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/admin/orders/${orderId}`,
         { status }
       );
       if (response.status === 200) {
@@ -31,7 +31,7 @@ function AdminOrdersPage(){
   const fetchOrders = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/admin/orders?status=${filter}`
+        `https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/admin/orders?status=${filter}`
       );
       setOrders(response.data);
     } catch (error) {
