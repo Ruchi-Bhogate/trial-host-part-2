@@ -35,7 +35,7 @@ app.use(morgan("dev"));
 app.use(express.json())
 app.use(
   cors({
-    origin:["http://localhost:3000", "https://ubookfront.onrender.com"],
+    origin:["http://localhost:3000", "https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app"],
   })
 );
 // app.post('/api/register',(req,res)=> {
