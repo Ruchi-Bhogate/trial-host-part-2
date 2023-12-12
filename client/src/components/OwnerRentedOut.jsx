@@ -13,7 +13,7 @@ function AllPostedBooks({ userId }) {
           }
     const fetchBooks = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/rentedout/allbooks`,
+        const response = await axios.get(`https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/rentedout/allbooks`,
           { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
           console.log(response.data);
         setBooks(response.data);
@@ -31,7 +31,7 @@ function AllPostedBooks({ userId }) {
     
     try {
       console.log(ownerId)
-      const response = await axios.post(`http://localhost:8080/rentedout/review/${ownerId}`, { 
+      const response = await axios.post(`https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/rentedout/review/${ownerId}`, { 
         rating: rating.value,
         comment: review.value,
         rentedBookId
@@ -55,7 +55,7 @@ function AllPostedBooks({ userId }) {
   const handleDeleteBook = async (bookId) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.delete(`http://localhost:8080/rentedout/deletebook/${bookId}`, {
+      const response = await axios.delete(`https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/rentedout/deletebook/${bookId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
   
