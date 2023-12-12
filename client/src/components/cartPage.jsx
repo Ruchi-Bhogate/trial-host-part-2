@@ -18,7 +18,7 @@ function CartPage() {
     // Load cart items from the database when the provider mounts
     const loadCartItems = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/cartview/cart-items',{
+        const response = await axios.get('https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/cartview/cart-items',{
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -39,7 +39,7 @@ function CartPage() {
       return;
     }
     try {
-      await axios.delete(`http://localhost:8080/cartview/remove-cart-item/${itemId}`, {
+      await axios.delete(`https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/cartview/remove-cart-item/${itemId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setCartItems(currentItems => currentItems.filter(item => item._id !== itemId));
@@ -63,7 +63,7 @@ function CartPage() {
     const token = localStorage.getItem('token');
     try {
       //console.log(updatedItem)
-      await axios.put(`http://localhost:8080/cartview/update-cart-item`, updatedItem, {
+      await axios.put(`https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/cartview/update-cart-item`, updatedItem, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setCartItems(currentItems =>
