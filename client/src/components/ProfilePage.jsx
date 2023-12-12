@@ -15,7 +15,7 @@ function ProfilePage({ userId }) {
   const [isEditMode, setIsEditMode] = useState(false);
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/profile/getdetails`,
+    axios.get(`https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/profile/getdetails`,
     { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then(response => {
         setUserData(response.data);
@@ -29,7 +29,7 @@ function ProfilePage({ userId }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`http://localhost:8080/profile/updatedetails`, userData,
+    axios.put(`https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/profile/updatedetails`, userData,
     { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then(response => {
         console.log('Profile updated', response.data);
