@@ -13,7 +13,7 @@ function Home() {
       }
 
       try {
-        const response = await axios.get('https://ubook.onrender.com/home', {
+        const response = await axios.get('https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/home', {
           headers: {
             'x-auth-token': token,
           },
