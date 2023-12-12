@@ -16,7 +16,7 @@ function Userview() {
       }
 
       try {
-        const response = await axios.get('http://localhost:8080/user', {
+        const response = await axios.get('https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/user', {
           headers: {
             'x-auth-token': token,
           },
