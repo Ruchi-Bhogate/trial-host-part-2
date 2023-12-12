@@ -8,7 +8,7 @@ function Forgot() {
   const sendEmail = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/Forgot', {
+      const response = await axios.post('https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/Forgot', {
         email
       });
       console.log(response.data);
