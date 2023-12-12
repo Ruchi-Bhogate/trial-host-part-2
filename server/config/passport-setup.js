@@ -7,7 +7,7 @@ const User = require('../models/user_model');
 passport.use(new GoogleStrategy({
   clientID: '614086975345-7khpfkharqvbbd4vn55u4thkaemgunc9.apps.googleusercontent.com',
   clientSecret: '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',
-  callbackURL: 'http://localhost:8080/auth/google/callback',
+  callbackURL: 'https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/auth/google/callback',
 },
 async (accessToken, refreshToken, profile, done) => {
     // Here you'd typically search your database for the user.
