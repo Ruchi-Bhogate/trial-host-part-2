@@ -16,7 +16,7 @@ export const CartProvider = ({ children }) => {
     // Load cart items from the database when the provider mounts
     const loadCartItems = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/cartview/cart-items',{
+        const response = await axios.get('https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/cartview/cart-items',{
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -38,7 +38,7 @@ export const CartProvider = ({ children }) => {
     }
     try {
       // Send the book to the backend to be added to the cart
-      const response = await axios.post('http://localhost:8080/cartview/add-to-cart', book,{
+      const response = await axios.post('https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/cartview/add-to-cart', book,{
         headers: {
           Authorization: `Bearer ${token}`,
         },
