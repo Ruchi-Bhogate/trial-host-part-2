@@ -7,7 +7,7 @@ export const createMessage = async ({ participants, message }) => {
         Authorization: `Bearer ${token}`,
       },
     };
-    const apiUrl = "http://localhost:8080/messages";
+    const apiUrl = "https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/messages";
     const response = await axios.post(
       apiUrl,
       {
@@ -35,7 +35,7 @@ export const getMessages = async ({ withId }) => {
         Authorization: `Bearer ${token}`,
       },
     };
-    const apiUrl = "http://localhost:8080/messages?with=" + withId;
+    const apiUrl = "https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/messages?with=" + withId;
     const response = await axios.get(apiUrl, headers);
     console.log("Messages:", response.data);
     return response.data;
@@ -53,7 +53,7 @@ export const getAllChats = async () => {
         Authorization: `Bearer ${token}`,
       },
     };
-    const apiUrl = "http://localhost:8080/messages/allchats";
+    const apiUrl = "https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/messages/allchats";
     const response = await axios.get(apiUrl, headers);
     console.log("Messages:", response.data);
     return response.data;
