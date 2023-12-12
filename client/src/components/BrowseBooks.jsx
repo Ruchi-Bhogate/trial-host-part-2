@@ -21,7 +21,7 @@ const [publishedYear, setPublishedYear] = useState(null);
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/userview/browsebooks');
+        const response = await axios.get('https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/userview/browsebooks');
         setBooks(response.data);
         setFilteredBooks(response.data);
       } catch (error) {
