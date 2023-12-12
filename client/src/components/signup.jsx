@@ -39,7 +39,7 @@ function Signup() {
    event.preventDefault()
 
 
-   const response = await fetch('http://localhost:8080/signup', {
+   const response = await fetch('https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/signup', {
        method: 'POST',
        headers: {
          'Content-Type': 'application/json'
