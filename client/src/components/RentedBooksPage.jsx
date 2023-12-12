@@ -21,7 +21,7 @@ function RentedBooksPage({ userId }) {
 
          const fetchBooks = async () => {
             try {
-              const response = await axios.get('http://localhost:8080/rentedbooks/getbooks',{
+              const response = await axios.get('https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/rentedbooks/getbooks',{
                 headers: {
                   Authorization: `Bearer ${token}`,
                 },
@@ -39,7 +39,7 @@ function RentedBooksPage({ userId }) {
 
   const handleReturnBook = async (rentedBookId) => {
     try {
-      const response = await axios.put(`http://localhost:8080/rentedbooks/update-status/${rentedBookId}`, 
+      const response = await axios.put(`https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/rentedbooks/update-status/${rentedBookId}`, 
         { status: 'returned' }, 
         { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
       );
@@ -64,7 +64,7 @@ function RentedBooksPage({ userId }) {
     
     try {
       console.log(ownerId)
-      const response = await axios.post(`http://localhost:8080/rentedbooks/review/${ownerId}`, { 
+      const response = await axios.post(`https://trial-host-part-2-qlcv-ruchis-projects-419a70ff.vercel.app/rentedbooks/review/${ownerId}`, { 
         rating: rating.value,
         comment: review.value,
         rentedBookId
